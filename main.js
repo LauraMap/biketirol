@@ -58,15 +58,20 @@ L.control.scale({
     imperial: false,
 }).addTo(map);
 
-   // GPX Track visualisieren aus https://raruto.github.io/leaflet-elevation/
-   let controlElevation = L.control.elevation({
+// GPX Track visualisieren aus https://raruto.github.io/leaflet-elevation/
+let controlElevation = L.control.elevation({
     time: false,
     elevationDiv: "#profile",
     height: 300,
     theme: "bike-tirol"
-   }).addTo(map);
+}).addTo(map);
 
-        // Load track from url (allowed data types: "*.geojson", "*.gpx", "*.tcx")
-   controlElevation.load("/data/etappe20.gpx")
+// Load track from url (allowed data types: "*.geojson", "*.gpx", "*.tcx")
+controlElevation.load("/data/etappe20.gpx")
 
-   console.log(ETAPPEN)
+//Pulldown für Navigation
+let pulldown = document.querySelector("#pulldown");
+for (let etappe of ETAPPEN) {
+    console.log(etappe);
+    pulldown.innerHTML += `<option value="${etappe.user}">Etappe ${etappe.nr}: ${etappe.etappe}</option>`
+}
