@@ -62,7 +62,8 @@ L.control.scale({
    let controlElevation = L.control.elevation({
     time: false,
     elevationDiv: "#profile",
-    height: 300
+    height: 300,
+    theme: "bike-tirol"
    }).addTo(map);
 
         // Load track from url (allowed data types: "*.geojson", "*.gpx", "*.tcx")
