@@ -58,8 +58,12 @@ L.control.scale({
     imperial: false,
 }).addTo(map);
 
-   // GPX Track visualisieren
-   let controlElevation = L.control.elevation().addTo(map);
+   // GPX Track visualisieren aus https://raruto.github.io/leaflet-elevation/
+   let controlElevation = L.control.elevation({
+    time: false,
+    elevationDiv: "#profile",
+    height: 300
+   }).addTo(map);
 
         // Load track from url (allowed data types: "*.geojson", "*.gpx", "*.tcx")
    controlElevation.load("/data/etappe20.gpx")
