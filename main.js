@@ -57,3 +57,9 @@ let layerControl = L.control.layers({
 L.control.scale({
     imperial: false,
 }).addTo(map);
+
+   // GPX Track visualisieren
+   let controlElevation = L.control.elevation().addTo(map);
+
+        // Load track from url (allowed data types: "*.geojson", "*.gpx", "*.tcx")
+   controlElevation.load("/data/etappe20.gpx")
