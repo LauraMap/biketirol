@@ -68,3 +68,5 @@ L.control.scale({
 
         // Load track from url (allowed data types: "*.geojson", "*.gpx", "*.tcx")
    controlElevation.load("/data/etappe20.gpx")
+
+   console.log(ETAPPEN)
