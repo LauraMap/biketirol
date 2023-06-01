@@ -67,7 +67,7 @@ let controlElevation = L.control.elevation({
 }).addTo(map);
 
 // Load track from url (allowed data types: "*.geojson", "*.gpx", "*.tcx")
-controlElevation.load("/data/etappe20.gpx")
+controlElevation.load("./data/etappe20.gpx")
 
 //Pulldown für Navigation
 let pulldown = document.querySelector("#pulldown");
